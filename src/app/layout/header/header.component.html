@@ -1,0 +1,25 @@
+<div class="header h-12  w-full">
+    <div class="overlay"></div>    
+    <nav class="flex flex-row items-center justify-center">
+        <a href="/" class="header__logo">
+            Surya
+        </a>
+
+        <a href="#" class="header__menu hide-for-desktop" #hamburger (click)='toggle()'
+            [ngClass]="{'open':hamburger_opened}">
+            <span></span><span></span><span></span>
+        </a>
+
+        <div class="header__links hide-for-mobile">
+            <a href="#">About</a>
+            <a href="#">Experience</a>
+            <a href="#">Work</a>
+            <a href="#">Skills</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <button>Resume</button>
+
+    </nav>
+    
+</div>

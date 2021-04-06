@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* ,*::after , *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$dark-navy: #020c1b;
+$navy: #0a192f;
+$light-navy: #112240;
+$lightest-navy: #233554;
+$navy-shadow: rgba(2,12,27,0.7);
+$slate: #8892b0;
+$light-slate: #a8b2d1;
+$lightest-slate: #ccd6f6;
+$white: #e6f1ff;
+$green: #64ffda;
+$green-tint: rgba(100,255,218,0.1);
+
+
+a ,a:visited ,a:hover {
+    text-decoration: none;
+}
+// Breakpoints
+@media (min-width: 64em){
+    // styles go here
+  }
+  
+  // 640px, 1024px, 1400px
+  $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+  
+  // 639px, 1023px, 1399px
+  $breakpoints-down: ("small": "39.9375em", "medium": "63.9375em", "large": "87.4375em");
+  
+  @mixin breakpoint-up($size){
+    @media (min-width: map-get($breakpoints-up, $size)){
+      @content;
+    }
+  }
+  
+  @mixin breakpoint-down($size){
+    @media (max-width: map-get($breakpoints-down, $size)){
+      @content;
+    }
+  }
+  // Visibility
+.hide-for-mobile {
+    @include breakpoint-down(medium){
+      display: none !important;
+    }
+  }
+  
+  .hide-for-desktop {
+    @include breakpoint-up(large){
+      display: none !important;
+    }
+  }
