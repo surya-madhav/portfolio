@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LayoutService } from '../layout.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   
   hamburger_opened: boolean = false;
-  constructor() { }
+  constructor(public layoutService: LayoutService) { }
 
   ngOnInit(): void {
   }
