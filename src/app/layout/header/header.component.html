@@ -1,25 +1,16 @@
-<div class="header h-12  w-full">
-    <div class="overlay"></div>    
-    <nav class="flex flex-row items-center justify-center">
-        <a href="/" class="header__logo">
-            Surya
-        </a>
+<div class="header bg-green-400 flex items-center justify-between">
+    <div><a href="/" class="text-base">Surya</a></div>
 
-        <a href="#" class="header__menu hide-for-desktop" #hamburger (click)='toggle()'
-            [ngClass]="{'open':hamburger_opened}">
-            <span></span><span></span><span></span>
-        </a>
+    <div class="hamburger md:hidden block">
+        <mat-icon>menu</mat-icon>
+    </div>
 
-        <div class="header__links hide-for-mobile">
-            <a href="#">About</a>
-            <a href="#">Experience</a>
-            <a href="#">Work</a>
-            <a href="#">Skills</a>
-            <a href="#">Contact</a>
-        </div>
-
-        <button>Resume</button>
-
-    </nav>
-    
+    <div class="nav__links md:flex items-center justify-between h-full hidden">
+        <a href="#">About</a>
+        <a href="#">Experience</a>
+        <a href="#">Work</a>
+        <a href="#">Skills</a>
+        <a href="#">Contact</a>
+        <button mat-stroked-button color="primary">Resume</button>
+    </div>
 </div>

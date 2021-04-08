@@ -1,0 +1,28 @@
+<!-- 
+    TODO Add breakpoints to check if mobile or if web
+    TODO If mobile hide top links 
+    TODO If web hide hamburger and make sure close the sidenav and disable it
+    TODO Add toggle settings for sidenav --  When sidenav closed show hamburger -- When open show the cross on the side
+    TODO Add css to links in sidenav
+ -->
+<mat-sidenav-container class="w-full h-full">
+    <mat-sidenav #sidenav style="width: 100%;" opened position='end'>
+        <!-- list of nav icons -->
+        <div class=" sidenav relative ">
+            <mat-icon class="absolute right-0 top-0 ">close</mat-icon>
+            <div class="nav__links flex flex-col items-center justify-center w-full h-full space-y-4 ">
+                <a href="# ">About</a>
+                <a href="# ">Experience</a>
+                <a href="# ">Work</a>
+                <a href="# ">Skills</a>
+                <a href="# ">Contact</a>
+            </div>
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <app-header></app-header>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia id quidem facere dolore rem ullam esse. Natus laborum culpa mollitia veniam voluptatem necessitatibus cum ea? Quia sit ipsum quis!
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
