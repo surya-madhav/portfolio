@@ -1,0 +1,39 @@
+
+// .container {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+.body{
+    width: 100%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.big-heading{
+    margin: 0px;
+    font-size: clamp(40px, 8vw, 80px);
+}
+.big-heading-1{
+    margin: 0px;
+    font-size: clamp(20px, 8vw, 60px);
+}
+.mat-icon-button.large {
+
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+
+    .mat-icon {
+      font-size: 48px;
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+    }
+  }
